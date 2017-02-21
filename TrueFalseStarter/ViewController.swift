@@ -19,16 +19,13 @@ class ViewController: UIViewController {
     
     var gameSound: SystemSoundID = 0
     
+    //Creating the labels and buttons
  
     @IBOutlet weak var questionField: UILabel!
-    
     @IBOutlet weak var firstAnswer: UIButton!
     @IBOutlet weak var secondAnswer: UIButton!
     @IBOutlet weak var thirdAnswer: UIButton!
     @IBOutlet weak var fourthAnswer: UIButton!
-    
-    
-    
     @IBOutlet weak var playAgainButton: UIButton!
     
 
@@ -55,7 +52,7 @@ class ViewController: UIViewController {
     }
     
     
-    
+    //Displays the question
     func displayQuestion() {
         indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: trivia.count)
         
@@ -87,6 +84,9 @@ class ViewController: UIViewController {
         
     }
     
+    
+    //Making the answers shown
+    //Lets user know if their answer is right or wrong
     @IBAction func checkAnswer(_ sender: UIButton) {
         // Increment the questions asked counter
         questionsAsked += 1
